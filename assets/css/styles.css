@@ -1,0 +1,253 @@
+/* SIDEBAR */
+.bi {
+  font-size: 2.5rem;
+}
+
+.nav-link .bi {
+  color: white; 
+}
+
+.nav-link:hover {
+  background-color: white; /* Cambia el color de fondo al pasar el mouse */
+  border-radius: 4px; /* borde redondeado */
+  transition: background-color 0.3s, color 0.3s; /* Añade una transición suave */
+}
+
+.nav-link:hover i {
+  color: black; /* Cambia el color del icono al pasar el mouse */
+}
+/* FIN SIDEBAR */
+
+/*HOME*/
+h1 {
+  display: grid;
+  gap: 0.2ex;
+  align-content: center;
+  font-size: clamp(2rem, 4vw + 2rem, 4rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-weight: 900;
+  background: linear-gradient(to right, #000, #333);
+  -webkit-text-fill-color: transparent;
+}
+h1 span {
+  text-indent: -0.225ch;
+}
+
+.border-text {
+  position: relative;
+}
+
+.border-text::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 5px solid #000;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.intro {
+  color: #000;
+  background-color: #fff;
+  padding: 2rem 0;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.intro p.lead {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+.intro .container {
+  position: relative;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.intro .container:hover {
+  background-color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+/*FIN HOME*/
+
+/* SECCIONES */
+section {
+  height: 100vh; /* Cada sección ocupa el 100% de la altura de la ventana */
+  width: 100%; /* Cada sección ocupa el 100% del ancho */
+  display: none; /* Ocultamos todas las secciones inicialmente */
+}
+
+section.active {
+  display: block; /* Mostramos solo la sección activa */
+}
+/* FIN SECCIONES */
+
+/* CARRUSEL HOME */      
+.owl-carousel h2 {
+  opacity: 0.2;
+  -webkit-transform: translateY(130px);
+  transform: translateY(130px);
+  -webkit-transition: all 0.3s linear 0.2s;
+  -moz-transition: all 0.3s linear 0.2s;
+  transition: all 0.3s linear 0.2s;
+}
+ 
+.owl-carousel .owl-item.active h2 {
+  opacity: 1;
+  -webkit-transform: translateY(0px); 
+  transform: translateY(0px);
+}
+ 
+.owl-carousel p {
+  opacity: 0.2;
+  -webkit-transform: translateY(130px);
+  transform: translateY(130px);
+  -webkit-transition: all 0.3s linear 0.5s;
+  -moz-transition: all 0.3s linear 0.5s;
+  transition: all 0.3s linear 0.5s;
+}
+ 
+.owl-carousel .owl-item.active p {
+  opacity: 1;
+  -webkit-transform: translateY(0px); 
+  transform: translateY(0px);
+  }
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* FIN CARRUSEL HOME */
+
+/* TECHNICAL SKILL */
+
+.progress-container {
+  height: 200px;
+  width: 60px;
+  background-color: #ffffff; /* Fondo blanco */
+  border: 2px solid #ddd; /* Borde gris claro */
+  border-radius: 5px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column-reverse;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra ligera */
+}
+.progress-bar-vertical {
+  width: 100%;
+  transition: height 0.6s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff; /* Color de texto blanco */
+  text-align: center;
+  font-size: 0.75rem; /* Tamaño de fuente pequeño */
+  line-height: 1.2; /* Espaciado del texto */
+}
+/*FIN TECHNICAL SKILLS*/
+
+/* Soft Skills */
+#soft-skills .skill-box {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#soft-skills .skill-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#soft-skills .skill-box i {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+#soft-skills .skill-box h3 {
+  font-size: 1.25rem;
+  color: #343a40;
+}
+
+#soft-skills .skill-box p {
+  color: #6c757d;
+}
+/*FIN SOFT-SKILLS*/
+
+/* CARRUSEL LOGOS */
+.logos::before, 
+.logos::after {
+  content: '';
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.logos::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #fff);
+}
+
+.logos::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+}
+
+.logos-slide {
+  animation: 20s slide infinite linear;
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide img {
+  height: 60px;
+  margin: 0 50px;
+}
+
+@keyframes slide {
+  from{
+    transform: translateX(0);
+  } to {
+    transform: translateX(-100%);
+  }
+}
+/* FIN CARRUSEL LOGOS */
+
+/* Proyctos card */
+.card {
+  height: 100%;
+}
+.card-img-top {
+  height: 70px;
+  object-fit: cover;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-card {
+  border: 1px solid #ddd; /* Borde ligero */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
